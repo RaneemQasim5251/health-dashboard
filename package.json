@@ -2,20 +2,32 @@
   "name": "health-dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://<your-github-username>.github.io/<your-repo-name>",
   "dependencies": {
+    "@react-three/drei": "^9.113.0",
+    "@react-three/fiber": "^8.17.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.4.4",
+    "drei": "^2.2.21",
+    "framer-motion": "^11.5.6",
     "react": "^18.3.1",
+    "react-animated-numbers": "^0.18.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.168.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.1.1"
   }
 }

@@ -1,38 +1,203 @@
-.App {
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f1f4f9;
+  margin: 0;
+  padding: 0;
+  direction: rtl; /* النص من اليمين لليسار */
+}
+
+.dashboard {
+  display: flex;
+}
+
+.navbar {
+  width: 250px;
+  background-color: #2e3b4e;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.navbar li:hover {
+  background-color: #3f506b;
+  border-radius: 8px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.right-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.vital-signs, .body-conditions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.card, .condition {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.three-d-model {
+  padding: 25px;
+  background: #f7f9fb;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  max-width: 400px;
+  height: auto; /* السماح بالنمذجة بشكل مناسب */
+}
+
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  color: #666;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reset-relax {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reset-relax h3 {
+  margin-bottom: 10px;
+}
+
+.reset-relax button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px 0; /* Add vertical margin */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.App-link {
-  color: #61dafb;
+.reset-relax button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* styles for the chatbot */
+#chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* اجعل البوت فوق باقي المحتويات */
 }
+
+/* تعديل الخلفية لتجنب مشكلة الصفحة البيضاء */
+body {
+  background-color: #f4f6f9; /* خلفية رمادية فاتحة */
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.right-content {
+  width: 70%;
+}
+
+.left-content {
+  width: 30%;
+}
+
+.reset-relax {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e7f1ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.reset-relax h3 {
+  margin-bottom: 10px;
+}
+
+.reset-relax button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
